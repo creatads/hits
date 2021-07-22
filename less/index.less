@@ -1,0 +1,279 @@
+@font-face {
+    font-family: 'HeliosLight';
+    src: url('https://hitfitness.club/assets/fonts/HeliosLight.eot');
+    src: url('https://hitfitness.club/assets/fonts/HeliosLight.eot?#iefix') format('embedded-opentype'),
+        url('https://hitfitness.club/assets/fonts/HeliosLight.woff2') format('woff2'),
+        url('https://hitfitness.club/assets/fonts/HeliosLight.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.bold() {
+	font-family: 'ProximaNova_Bold', sans-serif;
+}
+.reg() {
+	font-family: 'ProximaNova_Reg', sans-serif;
+}
+
+/* colors */
+@body-color:#17181c;
+@contact-color:#fefefe;
+@line-color:#808080;
+@bottom-color:#00ffd1; 
+@form-color:#d7d7d7;
+
+/* basic settings */
+html {
+	font-style: 10px;
+}
+body {
+	background-color:@body-color;
+}
+
+.advantage {
+	&__title {
+	h1{
+		font-family: 'HeliosLight', sans-serif;
+		font-size: 40px;
+		line-height: 53px;
+		font-weight: bold;
+		color: @contact-color;
+		text-transform: uppercase;
+		border-right: 4px solid @line-color;
+		margin: 3rem 0;
+		padding: 1rem 0;
+	}
+	&-desk {
+	 h1 {
+	 	padding: 5rem 0rem;
+	 }
+	}
+	&-consult {
+	 h1 {
+	 	border-right:none;
+	 	margin:3rem 0rem 0rem 0rem;
+	 	padding:0.5rem;
+	 	background-color: #000000;
+	 	display: inline-block;
+	 }
+	}
+}
+	&__text {
+	p {
+		font-size: 17px;
+		line-height: 24px;
+		color: @contact-color;
+		font-family: 'HeliosLight', sans-serif;
+		font-weight: 400;
+		margin-top: 3rem;
+		padding: 1rem 1rem;	
+	}
+	&-desk {
+	 p {
+	 	padding: 0rem 1rem;
+	 }
+	}
+	}
+}
+.column, .columns {
+    padding-right: 0rem;
+    padding-left: 0rem; 
+}
+.row {
+	align-items: end;
+}
+form {
+	border: 4px solid #FFFFFF;
+    border-radius: 40px;
+    padding: 4rem;
+    margin-bottom: 3rem;
+    margin-top: -2.0rem;
+}
+.form-control {
+	color: #000000;
+}
+.form-group {
+	margin-bottom: 1rem;
+}
+.form-group input {
+	background-color: @form-color;
+	border:@form-color;
+	border-radius: 30px;
+}
+.form-group textarea {
+	border:@form-color;
+	color: #000;
+	background-color: @form-color;
+	border-radius: 20px;	
+}
+.form-group select {
+	border:@form-color;
+	background-color: @form-color;
+	border-radius: 30px;
+	padding-left: 35px;
+	font-weight: bold;
+	font-family: 'HeliosLight', sans-serif;	
+}
+.place_holder {
+    z-index: 100;    
+    left: 10px;
+    cursor: text;   
+    position: absolute;
+    top: 8px;
+    left: 35px;
+    width: 100%;    
+    display: none;
+    color: #000000;
+    font-family: 'HeliosLight', sans-serif;
+    font-weight: bold;
+    text-align: left;
+}
+.placeinput input:invalid + .place_holder {
+     display: inline;
+}
+.placeinput textarea:invalid + .place_holder {
+     display: inline;
+}
+/*вся проблема в том, если placeholder больше инпута*/
+.placeinput {
+    position: relative;
+    overflow: hidden;
+}
+.place_holder span {
+    color: #808080;
+}
+.bottom-line {
+    border-top: 8px solid @bottom-color;
+    position: absolute;
+}
+.club_test_group {
+	height: 100%;
+	min-height: 850px;
+    padding: 100px 0 50px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+	&-one {
+	background-image: url(/img/group.png);
+	}
+	&-two {
+    background-image: url(/img/group2.png);
+    border-bottom: 8px solid @bottom-color;	
+	}
+}
+.btn-primary {
+	&-submit {
+		background-color:@bottom-color;
+		border-color: @bottom-color;
+		color:@body-color;
+		font-family: 'HeliosLight', sans-serif;
+		font-weight: bold;
+		border-radius:20px;
+		margin-top: 1rem;
+	}
+}
+.hidden {
+  display: none !important;
+}
+.wrapper {
+  max-width: 50%;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  height: 315px;
+}
+/* -------------------------------------------------------------------------
+   begin Video Youtube
+ * ------------------------------------------------------------------------- */
+.video-youtube {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 25px;
+  height: 0;
+  &-video-youtube_overlay {
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-color: transparent;
+      width: 100%;
+      height: 100%;
+      display: block;
+      z-index: 5;
+    }
+  }
+
+  .video-youtube__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 315px;
+    &-video-youtube__content_hide-origin-play-btn {
+      width: 10000%;
+      height: 10000%;
+      transform: scale(.01);
+      transform-origin: top left;
+      &::selection {
+        background-color: transparent;
+      }
+    }
+  }
+  .video-youtube__new-play-btn {
+    max-width: 153px;
+    max-height: 153px;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    background-image: url(https://erweb.ru/wp-content/uploads/2017/09/youtube-play.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    cursor: pointer;
+  }
+}
+@media(min-width: 1200px) {
+
+}
+@media(max-width: 991px) {
+
+}
+@media(max-width: 767px) {
+	 .wrapper {
+    max-width: 100%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    height: 315px;
+}
+	.advantage__title-desk {
+    max-width: 100%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+	}
+	.advantage__title h1 {
+	font-size: revert;
+	}
+	form {
+		margin: 5px;
+	}
+}
+
+@media(max-width:565px) {
+	.advantage__title h1 {
+	text-align: center;
+	}
+}
